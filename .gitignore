@@ -1,0 +1,7 @@
+.env
+api/.env
+node_modules
+dist
+.DS_Store
+__pycache__/
+*.pyc
