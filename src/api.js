@@ -1,7 +1,6 @@
-const API_BASE_URL = 'http://localhost:8000/api';
 
 export const getProjects = async () => {
-  const response = await fetch(`${API_BASE_URL}/submissions`);
+  const response = await fetch(`${import.meta.env.API_BASE_URL}/submissions`);
   if (!response.ok) {
     throw new Error('Failed to fetch projects');
   }
@@ -16,7 +15,7 @@ export const getProjectById = async (id) => {
 };
 
 export const createProject = async (projectData) => {
-  const response = await fetch(`${API_BASE_URL}/submissions`, {
+  const response = await fetch(`${import.meta.env.API_BASE_URL}/submissions`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
